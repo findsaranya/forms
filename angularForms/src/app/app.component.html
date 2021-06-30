@@ -65,12 +65,14 @@
   <hr/>
   <div class="row">
     <div class="col-md-12">
+      <div *ngIf="submittedForm">
       <p>User Details:</p>
-      <p>Username: </p>
-      <p>Email: </p>
-      <p>secret: </p>
-      <p>Question: </p>
-      <p>Gender : </p>
+      <p>Username:{{ userData.username | uppercase}} </p>
+      <p>Email: {{ userData.email}}</p>
+      <p>secret:{{ userData.secret}} </p>
+      <p>Question: {{ userData.question}} </p>
+      <p>Gender : {{ userData.gender}}</p>
+      </div>
       </div>
   </div>
 </div>

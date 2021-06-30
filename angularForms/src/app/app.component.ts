@@ -9,9 +9,10 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   @ViewChild('form') signupFrom: NgForm;
   title = 'angularForms';
-  defaultValue = 'pet';
+  defaultValue = '';
   answer: string = '';
   gender: Array<string> = ['male', 'female'];
+  submittedForm :boolean = false;
   userData= {
         username: '',
         email: '',
@@ -45,9 +46,12 @@ export class AppComponent {
   // }
   onSubmit() {
     console.log(this.signupFrom);
+    this.submittedForm=true;
     this.userData.username = this.signupFrom.value.userData.username;
     this.userData.email = this.signupFrom.value.userData.email;
     this.userData.gender =  this.signupFrom.value.userData.gender;
     this.userData.question = this.signupFrom.value.userData.question;
+    this.userData.secret = this.signupFrom.value.userData.secret;
+    this.signupFrom.reset();
   }
 }
