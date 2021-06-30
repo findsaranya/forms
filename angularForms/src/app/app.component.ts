@@ -14,15 +14,15 @@ export class AppComponent {
   gender: Array<string> = ['male', 'female'];
   suggestUserName() {
     const suggestedName = 'Superuser';
-    this.signupFrom.setValue({
-      userData: {
-        username: 'SaranyaG',
-        email: 'ugomecome@gmail.com',
-        question: 'lkkkll',
-        secret: 'pet',
-        gender: 'female',
-      },
-    });
+    // this.signupFrom.setValue({
+    //   userData: {
+    //     username: 'SaranyaG',
+    //     email: 'ugomecome@gmail.com',
+    //     question: 'lkkkll',
+    //     secret: 'pet',
+    //     gender: 'female',
+    //   },
+    // });
   }
   // onSubmit(form:NgForm){
   //   console.log("form submitted!!",form);
